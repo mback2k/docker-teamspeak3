@@ -6,7 +6,7 @@ RUN adduser --disabled-password --disabled-login --system --group \
         --uid 9987 --home /data teamspeak
 
 RUN apt-get update && \
-    apt-get install -y \
+    apt-get install -y --no-install-recommends \
         bzip2 mariadb-client libmariadb2 \
         locales supervisor && \
     apt-get clean
