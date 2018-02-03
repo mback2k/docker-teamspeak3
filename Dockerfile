@@ -12,6 +12,7 @@ RUN apt-get update && \
     apt-get clean
 
 RUN locale-gen en_US en_US.UTF-8 && dpkg-reconfigure locales
+ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 
 RUN mkdir -p /app
 WORKDIR /app
