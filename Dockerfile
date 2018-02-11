@@ -1,7 +1,5 @@
 FROM mback2k/ubuntu:rolling
 
-MAINTAINER Marc Hoersken "info@marc-hoersken.de"
-
 RUN adduser --disabled-password --disabled-login --system --group \
         --uid 9987 --home /data teamspeak
 
