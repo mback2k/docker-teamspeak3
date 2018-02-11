@@ -8,3 +8,5 @@ mkdir -p /data/files
 # set permissions of data directories
 chown -R teamspeak /data/logs
 chown -R teamspeak /data/files
+
+exit 0
