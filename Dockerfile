@@ -22,6 +22,7 @@ RUN chown root:root -R /app/teamspeak3-server_linux_amd64
 RUN chown teamspeak3:teamspeak3 /app/teamspeak3-server_linux_amd64
 
 RUN ln -s /app/teamspeak3-server_linux_amd64 /app/teamspeak3
+WORKDIR /app/teamspeak3
 
 RUN ln -s /data/logs /app/teamspeak3/logs
 RUN ln -s /data/files /app/teamspeak3/files
