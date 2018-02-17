@@ -1,7 +1,7 @@
 FROM mback2k/ubuntu:rolling
 
 RUN adduser --disabled-password --disabled-login --system --group \
-        --uid 9987 --home /data teamspeak
+        --uid 9987 --home /data teamspeak3
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
