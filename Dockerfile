@@ -19,6 +19,8 @@ ADD http://dl.4players.de/ts/releases/3.0.13.8/teamspeak3-server_linux_amd64-3.0
 RUN tar xfvj teamspeak3-server_linux_amd64-3.0.13.8.tar.bz2
 
 RUN chown root:root -R /app/teamspeak3-server_linux_amd64
+RUN chown teamspeak3:teamspeak3 /app/teamspeak3-server_linux_amd64
+
 RUN ln -s /app/teamspeak3-server_linux_amd64 /app/teamspeak3
 
 RUN ln -s /data/logs /app/teamspeak3/logs
