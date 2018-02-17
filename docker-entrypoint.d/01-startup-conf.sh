@@ -15,7 +15,7 @@ fi
 
 echo "#!/bin/sh" > /usr/local/bin/teamspeak3
 echo "cd ${TEAMSPEAK3_APPDIR}" >> /usr/local/bin/teamspeak3
-echo "export LD_LIBRARY_PATH=${TEAMSPEAK3_APPDIR}" >> /usr/local/bin/teamspeak3
+echo "export LD_LIBRARY_PATH=${TEAMSPEAK3_APPDIR}:${LD_LIBRARY_PATH}" >> /usr/local/bin/teamspeak3
 echo "exec ${TEAMSPEAK3_APPDIR}/ts3server inifile=${TEAMSPEAK3_INIFILE}" >> /usr/local/bin/teamspeak3
 
 chown --reference=${TEAMSPEAK3_APPDIR}/ts3server /usr/local/bin/teamspeak3
