@@ -6,7 +6,7 @@ RUN adduser --disabled-password --disabled-login --system --group \
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         mariadb-client libmariadb2 \
-        locales bzip2 && \
+        locales bzip2 netcat && \
     apt-get clean
 
 RUN locale-gen en_US en_US.UTF-8 && dpkg-reconfigure locales
@@ -34,3 +34,5 @@ ENV TEAMSPEAK3_INIFILE /data/ts3server.ini
 ADD docker-entrypoint.d/ /run/docker-entrypoint.d/
 
 CMD ["/usr/local/bin/teamspeak3"]
+
+HEALTHCHECK CMD echo "quit" | nc localhost 10011 || exit 1
