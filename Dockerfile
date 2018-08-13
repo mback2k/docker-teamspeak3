@@ -6,7 +6,8 @@ RUN adduser --disabled-password --disabled-login --system --group \
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         mariadb-client libmariadb2 \
-        locales bzip2 netcat && \
+        locales bzip2 netcat \
+        ca-certificates && \
     apt-get clean
 
 RUN locale-gen en_US en_US.UTF-8 && dpkg-reconfigure locales
