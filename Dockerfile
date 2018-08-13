@@ -15,8 +15,8 @@ ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 RUN mkdir -p /app
 WORKDIR /app
 
-ADD http://dl.4players.de/ts/releases/3.0.13.8/teamspeak3-server_linux_amd64-3.0.13.8.tar.bz2 /app
-RUN tar xfvj teamspeak3-server_linux_amd64-3.0.13.8.tar.bz2
+ADD http://dl.4players.de/ts/releases/3.3.0/teamspeak3-server_linux_amd64-3.3.0.tar.bz2 /app
+RUN tar xfvj teamspeak3-server_linux_amd64-3.3.0.tar.bz2
 
 RUN chown root:root -R /app/teamspeak3-server_linux_amd64
 RUN chown teamspeak3:teamspeak3 /app/teamspeak3-server_linux_amd64
