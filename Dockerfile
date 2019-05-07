@@ -1,4 +1,4 @@
-FROM mback2k/ubuntu:rolling
+FROM mback2k/ubuntu:xenial
 
 RUN adduser --disabled-password --disabled-login --system --group \
         --uid 9987 --home /data teamspeak3
