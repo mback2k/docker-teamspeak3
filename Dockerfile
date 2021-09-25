@@ -1,4 +1,4 @@
-FROM mback2k/ubuntu:xenial
+FROM ghcr.io/mback2k/docker-ubuntu/xenial:latest
 
 RUN adduser --disabled-password --disabled-login --system --group \
         --uid 9987 --home /data teamspeak3
